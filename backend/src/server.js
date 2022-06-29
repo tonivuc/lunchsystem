@@ -8,8 +8,6 @@ app.post('/', (req, res) => {
     res.send(404);
 });
 
-const lunchWishesRouter = require('./routes/lunchWishes');
-
-app.use("/lunch-wishes", lunchWishesRouter);
+app.use("/api/lunch-wishes", require('./routes/api/lunchWishes'));
 app.listen(3000);
 

@@ -1,10 +1,10 @@
 {
   "name": "lunchsystem",
-  "version": "0.1.0",
-  "description": "Shared node project for backend and frontend",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "A fun project for refreshing full stack development skills with mySQL, Express.js and React",
+  "main": "src/server.js",
   "scripts": {
-    "devStart": "concurrently --kill-others \" npm --prefix ./backend/ run devStart\""
+    "devStart": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/tonivuc/lunchsystem#readme",
   "dependencies": {
-    "concurrently": "^7.2.2"
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
   }
 }
