@@ -13,8 +13,8 @@ export default function Nav() {
           paddingBottom: "1rem",
         }}
       >
-        <Link to="/invoices">Lunch wishes</Link> |{" "}
-        <Link to="/expenses">Order checklist</Link>
+        <Link to="/">Lunch wishes</Link> |{" "}
+        <Link to="/placeholder">Order checklist</Link>
         
       </nav>
     </div>
