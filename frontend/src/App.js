@@ -1,14 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from "react";
-import {
-  Outlet,
-} from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LunchWishes from './pages/lunchWishes';
 import Placeholder from './pages/placeholder';
 
-import Nav from './components/nav';
 import PageFrame from './components/pageFrame';
 
 function App() {
@@ -19,7 +15,7 @@ function App() {
           <Route
           index
           element={<LunchWishes/>}
-        />
+          />
           <Route path='placeholder' element={<Placeholder />} />
         </Route>
         
