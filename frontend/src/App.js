@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from "react";
 import {
+  Outlet,
   Link
 } from "react-router-dom";
 
@@ -17,7 +18,9 @@ function App() {
       >
         <Link to="/invoices">Invoices</Link> |{" "}
         <Link to="/expenses">Expenses</Link>
+        
       </nav>
+      <Outlet />
     </div>
   );
 }
