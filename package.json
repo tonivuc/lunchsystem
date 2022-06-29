@@ -4,7 +4,7 @@
   "description": "Shared node project for backend and frontend",
   "main": "index.js",
   "scripts": {
-    "devStart": "concurrently --kill-others \" npm --prefix ./backend/ run devStart\""
+    "devStart": "concurrently --kill-others \" npm --prefix ./backend/ run devStart\" \" npm --prefix ./frontend/ run start\""
   },
   "repository": {
     "type": "git",
