@@ -7,7 +7,7 @@ import axios from 'axios';
 
 function LunchWishes() {
 
-  const [lunchWishes, setLunchWishes] = useState([{name: "John Doe", lunchItem: "Fajita"}]);
+  const [lunchWishes, setLunchWishes] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/lunch-wishes')
