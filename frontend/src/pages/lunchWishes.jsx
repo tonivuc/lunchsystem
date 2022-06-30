@@ -10,7 +10,7 @@ function LunchWishes() {
   const [lunchWishes, setLunchWishes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/lunch-wishes')
+    axios.get('http://172.16.16.98:3000/api/lunch-wishes')
       .then(res => {
         const fetchedLunchWishes = parseLunchWishes(res);
         setLunchWishes([...lunchWishes, ...fetchedLunchWishes])
@@ -24,7 +24,8 @@ function LunchWishes() {
     event.preventDefault();
     const newLunchWish = createLunchWish(name, lunchItem)
     setLunchWishes([...lunchWishes, newLunchWish]);
-    axios.post('http://localhost:3000/api/lunch-wishes', {name: newLunchWish.name, lunch_item: newLunchWish.lunchItem})
+    axios.post('http://172.16.16.98:3000/api/lunch-wishes', {name: newLunchWish.name, lunch_item: newLunchWish.lunchItem})
+      .then()
       .catch(err => {
         console.log(err);
       })

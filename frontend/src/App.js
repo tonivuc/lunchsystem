@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LunchWishes from './pages/lunchWishes';
-import Placeholder from './pages/placeholder';
+import ReceiptUpload from './pages/receiptUpload';
 
 import PageFrame from './components/pageFrame';
 
@@ -16,7 +16,7 @@ function App() {
           index
           element={<LunchWishes/>}
           />
-          <Route path='placeholder' element={<Placeholder />} />
+          <Route path='receipt-upload' element={<ReceiptUpload />} />
         </Route>
         
           <Route
