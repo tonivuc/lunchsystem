@@ -24,6 +24,10 @@ function LunchWishes() {
     event.preventDefault();
     const newLunchWish = createLunchWish(name, lunchItem)
     setLunchWishes([...lunchWishes, newLunchWish]);
+    axios.post('http://localhost:3000/api/lunch-wishes', {name: newLunchWish.name, lunch_item: newLunchWish.lunchItem})
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   return (
@@ -37,10 +41,9 @@ function LunchWishes() {
 
 function parseLunchWishes(res) {
   return res.data.map((lunchWish) => {
-    return createLunchWish(lunchWish.name, lunchWish.lunch_wish)
+    return createLunchWish(lunchWish.name, lunchWish.lunch_item)
   })
 }
-
 
 
 function createLunchWish(name, lunchItem) {

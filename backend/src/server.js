@@ -2,6 +2,8 @@ const express = require("express")
 const app = express();
 const port = 5000;
 
+console.log("Runnign dev server backend!")
+
 app.use(express.json());
 
 app.post('/', (req, res) => {
