@@ -1,9 +1,9 @@
 
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { Button } from 'bootstrap';
 import { useRef } from 'react';
 import Col from 'react-bootstrap/esm/Col';
+import Button from 'react-bootstrap/Button';
 
 function LunchWishForm(props) {
     const nameInputRef = useRef(null);
