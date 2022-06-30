@@ -1,17 +1,22 @@
-import Col from 'react-bootstrap/Col';
+
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import Button from "react-bootstrap/Button";
+import { Button } from 'bootstrap';
+import { useRef } from 'react';
+import Col from 'react-bootstrap/esm/Col';
 
 function LunchWishForm(props) {
+    const nameInputRef = useRef(null);
+    const lunchWishInputRef = useRef(null);
+
   return (
-      <Form onSubmit={props.onSubmit}>
+      <Form onSubmit={e => props.onSubmit(e, nameInputRef?.current?.value, lunchWishInputRef?.current?.value)}>
         <Row>
           <Col>
-            <Form.Control placeholder="Name" />
+            <Form.Control placeholder="Name" ref={nameInputRef} />
           </Col>
           <Col>
-            <Form.Control placeholder="Lunch wish" />
+            <Form.Control placeholder="Lunch wish" ref={lunchWishInputRef} />
           </Col>
           <Col>
             <Button variant="primary" type="submit">
