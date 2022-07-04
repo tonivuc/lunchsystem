@@ -34,13 +34,13 @@ function LunchWishForm(props) {
         <Form noValidate validated={validated} onSubmit={e => submitForm(e, nameInputRef?.current?.value, lunchWishInputRef?.current?.value)}>
         <Row>
             <Col>
-                <Form.Control required placeholder="Name" ref={nameInputRef} />
+                <Form.Control required placeholder="Your name" ref={nameInputRef} />
                 <Form.Control.Feedback type="invalid">
                 Please provide a name.
                 </Form.Control.Feedback>
             </Col>
             <Col>
-                <Form.Control required placeholder="Lunch wish" ref={lunchWishInputRef} />
+                <Form.Control required placeholder="Want for lunch" ref={lunchWishInputRef} />
             </Col>
             <Col>
                 <Button variant="primary" type="submit">

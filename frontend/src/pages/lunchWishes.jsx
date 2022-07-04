@@ -33,9 +33,9 @@ function LunchWishes() {
 
   return (
     <Container>
-    <h2>Enter your lunch wish</h2>
+    <h1>Enter your lunch wish</h1>
     <LunchWishForm onSubmit={onSubmitLunchWish}/>
-    <LunchWishList lunchWishes={lunchWishes}/>
+    <LunchWishList className='mt-3' lunchWishes={lunchWishes}/>
     </Container>
   );
 }

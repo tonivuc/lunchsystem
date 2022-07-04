@@ -6,7 +6,7 @@ function LunchWishList(props) {
     const lunchWishes = props.lunchWishes || [];
 
     return (
-        <ListGroup as="ul">
+        <ListGroup className={props.className} as="ul">
             {lunchWishes.map((lunchWish) => 
                 <LunchWishItem lunchWish={lunchWish}/>)}
         </ListGroup>
